@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:http="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/css/common.css" />
+</head>
+<body>
+    <h1 class="logo_bumil" th:align="center">
+      <img src="/images/logo_bumil.jpg" th:onclick="|location.href='@{/member/index}'|">
+    </h1>
+    <table th:border="1" th:align="center">
+        <tr>
+            <th>순번</th>
+            <th>아이디</th>
+            <th>이메일</th>
+            <th>상세조회</th>
+            <th>삭제</th>
+        </tr>
+        <tr th:each="member: ${memberList}">
+            <td th:text="${member.memberSeq}"></td>
+            <td th:text="${member.memberId}"></td>
+            <td th:text="${member.memberEmail}"></td>
+            <td>
+                <!-- query string /member?id=1
+                    rest api /member/1 -->
+                <a th:href="@{|/member/${member.memberSeq}|}">조회</a>
+            </td>
+            <td>
+                <a th:href="@{|/member/delete/${member.memberSeq}|}">삭제</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

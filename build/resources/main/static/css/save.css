@@ -1,0 +1,868 @@
+html {
+    font-size: 12px;
+    overflow:hidden;
+}
+
+.logo_bumil img {
+    cursor: pointer;
+    flex: none;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: -18px;
+    padding: 25px 115px 25px 149px;
+    height: 50px;
+    width: 200px;
+}
+
+div {
+    display: block;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+input {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-image: initial;
+}
+
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+
+input[type="tel" i] {
+    padding: 1px 2px;
+}
+
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+
+button {
+    appearance: auto;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    writing-mode: horizontal-tb !important;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-image: initial;
+    cursor: pointer;
+}
+
+select {
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    box-sizing: border-box;
+    align-items: center;
+    white-space-collapse: preserve;
+    -webkit-rtl-ordering: logical;
+    cursor: default;
+    margin: 0em;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    border-radius: 0px;
+}
+
+option {
+    font-weight: normal;
+    display: block;
+    white-space-collapse: collapse;
+    min-height: 1.2em;
+    padding: 0px 2px 1px;
+}
+
+label {
+    cursor: pointer;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+address, em {
+    font-style: normal;
+}
+
+em {
+    font-style: italic;
+}
+
+.input {
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222;
+}
+
+input:not([type="range"]):not([type="color"]):not([type="button"]):not([type="reset"]):not([type="submit"]):not([type="file"]) {
+    writing-mode: horizontal-tb !important;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    width: 500px;
+    margin: 0 auto;
+}
+
+body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, select, table, td, textarea, th, ul {
+    padding: 0;
+    -webkit-text-size-adjust: none;
+}
+
+body, button, input, select, table, textarea {
+    font-family: Malgun Gothic,'맑은 고딕',Helvetica,sans-serif;
+    font-size: 12px;
+    -webkit-text-size-adjust: none;
+}
+
+button, input, select, textarea {
+    border-radius: 0;
+    border: none;
+    background: 0 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-text-size-adjust: none;
+}
+
+.admit_tab .tab .text::before, .admit_tab .tab[aria-selected=true] .text::before, .bottom_popup .benefit_item.gift::before, .bottom_popup .benefit_item.remit::before, .bottom_popup .benefit_item.touch::before, .bottom_popup .btn_area .text.logo_n::before, .bottom_popup .btn_expand .text::before, .bottom_popup .title.icon_phone::before, .btn_show.hide::before, .btn_show::before, .btn_telecom::after, .check_circle input:checked+label::before, .check_circle label::before, .check_circle.error label::before, .check_normal .link_arrow::before, .check_normal input:checked+label::before, .check_normal label::before, .check_terms .link_arrow::before, .check_terms input:checked+label::before, .check_terms label::before, .form_item.calendar.error::before, .form_item.calendar.on::before, .form_item.calendar::before, .form_item.check_box .btn_expand::before, .form_item.check_box.error .check_circle label::before, .form_item.email.error::before, .form_item.email.on::before, .form_item.email::before, .form_item.globe.error::before, .form_item.globe::before, .form_item.group.error::before, .form_item.group.on::before, .form_item.group::before, .form_item.group_type.error::before, .form_item.group_type.on::before, .form_item.group_type::before, .form_item.lock.error::before, .form_item.lock.on::before, .form_item.lock::before, .form_item.phone.error::before, .form_item.phone.on::before, .form_item.phone::before, .form_item.registration_number.error::before, .form_item.registration_number.on::before, .form_item.registration_number::before, .form_item.telecom.error::before, .form_item.telecom.on::before, .form_item.telecom::before, .join_link_area .link::after, .join_toggle input:checked+label::after, .join_toggle label::after, .lang_select_wrap::after, .lang_select_wrap::before, .link_certify::after, .logo_naver .link::before, .select_box::after, .welcome_wrap .main_title::before, .welcome_wrap .service_link.blog::before, .welcome_wrap .service_link.cafe::before, .welcome_wrap .service_link.home::before, .welcome_wrap .service_link.id::before, .welcome_wrap .service_link.mail::before, .welcome_wrap .service_link.shopping::before, .welcome_wrap .service_link::after {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_cf3f88d5.png);
+    background-size: 372px 326px;
+    background-repeat: no-repeat;
+}
+
+.container {
+    height: 100%;
+    font-size: 0;
+}
+
+.content {
+    flex: 1 1 auto;
+    padding-top: 30px;
+}
+
+.form {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 100%;
+}
+
+.form_content {
+    flex: 1 1 auto;
+}
+
+.form_section {
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0 20px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.form_list {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border-color: #6c6c6e;
+}
+
+.form_list::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 1px solid #c6c6c6;
+    pointer-events: none;
+    content: '';
+}
+
+.form_item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-height: 50px;
+    padding: 0 10px 0 0;
+}
+
+.form_item+.form_item {
+    margin-top: -1px;
+}
+
+/*.form_item:not(.error).user::before {*/
+/*    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_dark_489ebaf8.png);*/
+/*    background-size: 191px 168px;*/
+/*    background-position: -32px -52px;*/
+/*    background-repeat: no-repeat;*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*}*/
+
+/*.form_item::before {*/
+/*    position: absolute;*/
+/*    top: 10px;*/
+/*    left: 9px;*/
+/*    content: '';*/
+/*}*/
+
+/*.form_item.user::before {*/
+/*    background-position: -252px -206px;*/
+/*    background-repeat: no-repeat;*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*}*/
+
+.form_item::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border: 1px solid #dfdfdf;
+    pointer-events: none;
+    content: '';
+}
+
+.form_item:first-of-type {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.form_item .id_bumil {
+    flex: none;
+    padding: 0 4px 0 6px;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -.2px;
+    color: #767678;
+}
+
+#check-result {
+    flex: none;
+    padding: 0 4px 0 6px;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -.2px;
+    color: #767678;
+}
+
+.form_item+.form_item {
+    margin-top: -1px;
+}
+
+.form_item:not(.error).lock::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_dark_489ebaf8.png);
+    background-size: 191px 168px;
+    background-position: 0 -20px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.form_item.lock::before {
+    background-position: -310px -32px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.form_item.gender {
+    padding: 0 10px;
+}
+
+.form_item.check_box {
+    display: block;
+    padding: 0;
+}
+
+.form_item.check_box .btn_expand::before {
+    background-position: -284px -174px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: top;
+    content: '';
+}
+
+.form_item.check_box .title_area {
+    position: relative;
+    padding: 14px 45px 14px 14px;
+}
+
+.form_item.check_box .check_list {
+    display: none;
+    padding: 9px 14px 16px;
+    border-top: 1px solid #dfdfdf;
+}
+
+.check_list .item {
+    display: inline-block;
+    min-width: 50%;
+    vertical-align: top;
+    padding-top: 7px;
+}
+
+.check_normal {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.check_circle label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    vertical-align: middle;
+}
+
+.check_circle label::before {
+    background-position: -342px -160px;
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+}
+
+.check_circle .option {
+    display: inline-block;
+    margin-right: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -.6px;
+    color: #929294;
+    vertical-align: middle;
+}
+
+.check_circle .text {
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: -.8px;
+    color: #222;
+    vertical-align: middle;
+}
+
+.check_circle .option.point {
+    color: #03c75a;
+}
+
+.check_circle .option+.text {
+    font-weight: 600;
+}
+
+.gender_list {
+    width: 100%;
+}
+
+.gender_list .radio_item {
+    width: 33.333333%;
+}
+
+.password_info {
+    flex: none;
+    padding: 0 5px;
+}
+
+.how_secure {
+    display: none;
+    padding: 4px 6px 3px 6px;
+    border-radius: 10px;
+    background: rgba(255,168,0,.12);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 13px;
+    letter-spacing: -.4px;
+    color: #ffa41c;
+    vertical-align: middle;
+}
+
+.btn_show {
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.btn_retry {
+    flex: none;
+    padding: 8px;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -.4px;
+    color: #929294;
+    text-decoration: underline;
+}
+
+.btn_show.hide::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_dark_489ebaf8.png);
+    background-size: 191px 168px;
+    background-position: -129px -32px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.form_item:not(.error).email::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_dark_489ebaf8.png);
+    background-size: 191px 168px;
+    background-position: -64px -52px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+/*.form_item:not(.error).user::before {*/
+/*    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_dark_489ebaf8.png);*/
+/*    background-size: 191px 168px;*/
+/*    background-position: -32px -52px;*/
+/*    background-repeat: no-repeat;*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*}*/
+
+.form_item.email::before {
+    background-position: -310px -192px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+form_item.phone {
+    padding-right: 94px;
+}
+
+.form_item:last-of-type {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.form_item.telecom::before {
+    background-position: -192px -296px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.form_item:not(.error).telecom::before {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_dark_489ebaf8.png);
+    background-size: 191px 168px;
+    background-position: -128px -116px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.form_item.check_box .btn_expand {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.btn_telecom {
+    position: relative;
+    width: 100%;
+    padding-right: 30px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -.8px;
+    color: #222;
+    text-align: left;
+}
+
+.btn_telecom::after {
+    background-position: -284px -174px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 17px;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    content: '';
+}
+
+.btn_telecom .placeholder {
+    font-size: 15px;
+    color: #929294;
+}
+
+.telecom_menu {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 42px;
+    left: 40px;
+    z-index: 100;
+    width: 200px;
+    border-radius: 6px;
+    border: 1px solid #c6c6c6;
+    box-shadow: 1px 1px 10px rgba(18,28,70,.08);
+    background: #fff;
+    border-color: #6c6c6e;
+    background: #48484b;
+}
+
+.telecom_menu .item {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    vertical-align: top;
+}
+
+.telecom_menu .item::after {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    border: 1px solid #f2f2f2;
+    border-width: 1px 0 0 1px;
+    pointer-events: none;
+    content: '';
+}
+
+.telecom_menu .button {
+    width: 100%;
+    padding: 11px 8px;
+    text-align: left;
+}
+
+.telecom_menu .text {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -.8px;
+    color: #222;
+    vertical-align: middle;
+}
+
+.form_item.adult {
+    padding: 0 10px 0 1px;
+}
+
+.adult_list {
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 9px;
+}
+
+.adult_list .radio_item {
+    width: 50%;
+}
+
+.radio_item:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+
+.radio_item {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.radio_item+.radio_item {
+    margin-left: -1px;
+}
+
+.radio_item label {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px 0;
+    border-radius: inherit;
+    border: 1px solid #c6c6c6;
+    font-size: 13px;
+    line-height: 18px;
+    color: #929294;
+    text-align: center;
+}
+
+.radio_item input:checked+label {
+    color: #1E90FF;
+    z-index: 1;
+    border-color: #1E90FF;
+    font-weight: 500;
+}
+
+.select_box {
+    flex: 1 1 auto;
+    position: relative;
+    padding: 1px 0 1px 0;
+}
+
+.select_box::after {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_dark_489ebaf8.png);
+    background-size: 191px 168px;
+    background-position: -22px -148px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 17px;
+}
+
+.select {
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    color: #222;
+    background: #fff;
+}
+
+.select option {
+    background: #48484b;
+}
+
+
+.admit_tab .tab .text::before, .admit_tab .tab[aria-selected=true] .text::before, .bottom_popup .benefit_item.gift::before, .bottom_popup .benefit_item.remit::before, .bottom_popup .benefit_item.touch::before, .bottom_popup .btn_area .text.logo_n::before, .bottom_popup .btn_expand .text::before, .bottom_popup .title.icon_phone::before, .btn_show.hide::before, .btn_show::before, .btn_telecom::after, .check_circle input:checked+label::before, .check_circle label::before, .check_circle.error label::before, .check_normal .link_arrow::before, .check_normal input:checked+label::before, .check_normal label::before, .check_terms .link_arrow::before, .check_terms input:checked+label::before, .check_terms label::before, .form_item.calendar.error::before, .form_item.calendar.on::before, .form_item.calendar::before, .form_item.check_box .btn_expand::before, .form_item.check_box.error .check_circle label::before, .form_item.email.error::before, .form_item.email.on::before, .form_item.email::before, .form_item.globe.error::before, .form_item.globe::before, .form_item.group.error::before, .form_item.group.on::before, .form_item.group::before, .form_item.group_type.error::before, .form_item.group_type.on::before, .form_item.group_type::before, .form_item.lock.error::before, .form_item.lock.on::before, .form_item.lock::before, .form_item.phone.error::before, .form_item.phone.on::before, .form_item.phone::before, .form_item.registration_number.error::before, .form_item.registration_number.on::before, .form_item.registration_number::before, .form_item.telecom.error::before, .form_item.telecom.on::before, .form_item.telecom::before, .form_item.user.error::before, .form_item.user.on::before, .join_link_area .link::after, .join_toggle input:checked+label::after, .join_toggle label::after, .lang_select_wrap::after, .lang_select_wrap::before, .link_certify::after, .logo_naver .link::before, .select_box::after, .welcome_wrap .main_title::before, .welcome_wrap .service_link.blog::before, .welcome_wrap .service_link.cafe::before, .welcome_wrap .service_link.home::before, .welcome_wrap .service_link.id::before, .welcome_wrap .service_link.mail::before, .welcome_wrap .service_link.shopping::before, .welcome_wrap .service_link::after {
+    background-image: url(https://ssl.pstatic.net/static/nid/join/m_sp_06_realname_cf3f88d5.png);
+    background-size: 372px 326px;
+    background-repeat: no-repeat;
+}
+
+.error_text {
+    margin: 10px 4px 0;
+    font-size: 13px;
+    line-height: 18px;
+    color: #ff3f3f;
+}
+
+.error_text+.form_list {
+    margin-top: 10px;
+}
+
+.error_text.item_style {
+    position: relative;
+    padding-left: 8px;
+    letter-spacing: -.4px;
+}
+
+.error_text.item_style::before {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #ff3f3f;
+    content: '';
+}
+
+.error_text+.form_list {
+    margin-top: 10px;
+}
+
+.notice_text {
+    margin: 10px 4px 0 4px;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -1.2px;
+    color: #03c75a;
+}
+
+.btn_submit_wrap {
+    flex: none;
+    padding: 20px;
+}
+
+.btn_submit {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,.05);
+    background: #1E90FF;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+}
+
+.dimlayer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    font-size: 0;
+}
+
+.dimbg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: .53;
+}
+
+.popup_content {
+    overflow: auto;
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.popup_content::after {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+}
+
+.id_popup {
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    max-width: 295px;
+    padding-top: 30px;
+    border-radius: 12px;
+    box-shadow: 2px 6px 15px rgba(0, 0, 0, .1);
+    background: #484848;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.id_list {
+    padding: 14px 24px 37px 18px;
+}
+
+.id_popup .title {
+    display: block;
+    margin: 0 24px;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: -.8px;
+    color: #1e1e23;
+}
+
+.id_popup .btn_area button {
+    padding: 19px 0 18px;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -.2px;
+    color: #fff;
+}
+
+.id_popup .btn_area .btn_close {
+    width: 40%;
+    background: #959eae;
+    font-weight: 500;
+}
+
+.id_popup .btn_area .btn_login {
+    width: 60%;
+    background: #09aa5c;
+    font-weight: 700;
+}
+
+.i_wrap * {
+    padding: 0 15px 0 15px;
+    font-size: medium;
+}

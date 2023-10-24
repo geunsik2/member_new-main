@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+  <link rel="stylesheet" href="/css/common.css" />
+  <link rel="stylesheet" href="/css/update.css" />
+</head>
+<body>
+    <h1 class="logo_bumil" th:align="center">
+      <img src="/images/logo_bumil.jpg" th:onclick="|location.href='@{/member/index}'|">
+    </h1>
+    <div id="content">
+        <div class="section_pwconfirm">
+          <h2>정보 수정</h2>
+          <div class="spc_content">
+              <form action="/member/update" method="post">
+                  <input type="hidden" class="" th:value="${updateMember.memberSeq}" name="memberSeq">
+                  아이디: <input type="text" th:value="${updateMember.memberId}" name="memberId"> <br><br>
+                  비밀번호: <input type="text" th:value="${updateMember.memberPassword}" name="memberPassword"> <br><br>
+                  이메일: <input type="text" th:value="${updateMember.memberEmail}" name="memberEmail"> <br><br>
+                  이름: <input type="text" th:value="${updateMember.memberName}" name="memberName"> <br><br>
+                  생년월일: <input type="text" th:value="${updateMember.memberBirth}" name="memberBirth"> <br><br>
+                  성별: <input type="text" th:value="${updateMember.memberGender}" name="memberGender"> <br><br>
+                  전화번호: <input type="text" th:value="${updateMember.memberPhone}" name="memberPhone"> <br><br><br>
+                  <p class="sub_btn">
+                      <input type="submit" value="정보수정">
+                  </p>
+              </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

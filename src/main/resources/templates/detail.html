@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>detail</title>
+    <link rel="stylesheet" href="/css/common.css" />
+</head>
+<body>
+    <h1 class="logo_bumil" th:align="center">
+        <img src="/images/logo_bumil.jpg" th:onclick="|location.href='@{/member/index}'|">
+    </h1>
+    <table th:border="1" th:align="center">
+        <tr>
+            <th>순번</th>
+            <th>아이디</th>
+            <th>비밀번호</th>
+            <th>이메일</th>
+            <th>이름</th>
+            <th>생년월일</th>
+            <th>성별</th>
+            <th>전화번호</th>
+        </tr>
+        <tr>
+            <td th:text="${member.memberSeq}"></td>
+            <td th:text="${member.memberId}"></td>
+            <td th:text="${member.memberPassword}"></td>
+            <td th:text="${member.memberEmail}"></td>
+            <td th:text="${member.memberName}"></td>
+            <td th:text="${member.memberBirth}"></td>
+            <td th:text="${member.memberGender}"></td>
+            <td th:text="${member.memberPhone}"></td>
+        </tr>
+    </table>
+</body>
+</html>

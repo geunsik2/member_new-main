@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo_bumil">
+            <img src="/images/logo_bumil.jpg" onclick="document.location.reload();">
+        </h1>
+        <div id="account" class="Layout-module__content_area___b_3TU">
+            <div class="MyView-module__my_info___GNmHz">
+                <div class="MyView-module__info_user___sJGWU">
+                    <span class="MyView-module__thumb_box___poa_h MyView-module__type_noimg___a7yce"></span>
+                    <span class="MyView-module__thumb_setting___WS7Xv">
+                        <span class="blind">프로필 설정</span>
+                    </span>
+                    <div class="MyView-module__user_desc___UWPUY">
+                        <div class="MyView-module__desc_info___Erh2V">
+                            <span class="MyView-module__nickname___fcxwI" th:text="${session.loginId}"></span>님
+                        </div>
+                        <div class="MyView-module__desc_email___JwAKa"><span class="MyView-module__desc_email___JwAKa" th:text="${session.loginId}"></span>@bumil.com</div>
+                        <div class="MyView-module__desc_new___BJQbF">
+                            <a href="/member/update" class="MyView-module__link_new___lnR1w">내 정보 수정하기</a>
+                        </div>
+                    </div>
+                    <a class="MyView-module__btn_logout___bsTOJ" href="/member/logout">로그아웃</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
