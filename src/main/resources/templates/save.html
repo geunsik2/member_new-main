@@ -29,15 +29,20 @@
                                 <!-- Password -->
                                 <div class="form_item lock password" id="divPasswd">
                                     <div class="i_wrap"><i class="fa-solid fa-lock"></i></div>
-                                    <input type="password" name="memberPassword" placeholder="비밀번호" class="input" value="" maxlength="20" autocomplete="new-password">
+                                    <input type="password" name="memberPassword" onblur="pwCheck()" placeholder="비밀번호" class="input" value="" maxlength="20" autocomplete="new-password">
                                 </div>
 
                                 <!-- Email -->
                                 <div class="form_item email" id="divEmail">
                                     <div class="i_wrap"><i class="fa-solid fa-envelope"></i></div>
-                                    <span class="placeholder_prefix">[선택]</span>
-                                    <input type="email" id="memberEmail" name="memberEmail" placeholder="[선택] 비밀번호 분실 시 확인용 이메일" class="input" value="" maxlength="100">
-                                </div>
+                                    <input type="email" id="memberEmail" name="memberEmail" placeholder="이메일" class="input" value="" maxlength="100">
+                                    <button type="button" id="sendBtn" name="sendBtn" onclick="sendNumber()">인증번호</button>
+                                </div><br>
+                                <div class="form_item email" id="mail_number" name="mail_number" style="display: none">
+                                    <input type="text" name="number" class="input" id="number" placeholder="인증번호 입력">
+                                    <button type="button" name="confirmBtn" id="confirmBtn" onclick="confirmNumber()">이메일 인증</button>
+                                </div><br>
+                                <input type="text" id="Confirm" name="Confirm" style="display: none" value="">
                             </div>
                             <p id="check-result"></p>
                             <div class="error_text item_style" id="idMsg" style="display: none"></div>
@@ -781,15 +786,30 @@
             }
         });
     }
+
+    function sendNumber(){
+        $("#mail_number").css("display","block");
+        $.ajax({
+            url:"/mail",
+            type:"post",
+            dataType:"json",
+            data:{"mail" : $("#memberEmail").val()},
+            success: function(data){
+                alert("인증번호 발송");
+                $("#Confirm").attr("value",data);
+            }
+        });
+    }
+
+    function confirmNumber(){
+        var number1 = $("#number").val();
+        var number2 = $("#Confirm").val();
+
+        if(number1 == number2){
+            alert("인증되었습니다.");
+        }else{
+            alert("번호가 다릅니다.");
+        }
+    }
 </script>
 </html>
-
-
-
-
-
-
-
-
-
-

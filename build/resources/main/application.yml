@@ -20,3 +20,14 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: family6796@gmail.com
+    password: agfv xliw fxqe tubs
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
