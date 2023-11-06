@@ -36,6 +36,9 @@ public class MemberEntity {
     @Column(nullable = false)
     private String memberPhone;
 
+    @Column
+    private String resetPasswordToken;
+
     public static MemberEntity toMemberEntity(MemberDTO memberDTO) {
         MemberEntity memberEntity = new MemberEntity();
         memberEntity.setMemberId(memberDTO.getMemberId());

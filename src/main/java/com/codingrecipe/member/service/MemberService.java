@@ -4,16 +4,22 @@ import com.codingrecipe.member.dto.MemberDTO;
 import com.codingrecipe.member.entity.MemberEntity;
 import com.codingrecipe.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class MemberService {
     private final MemberRepository memberRepository;
+    private final MailService mailService;
+
     public void save(MemberDTO memberDTO) {
         // 1. dto -> entity 변환
         // 2. repository의 save 메서드 호출
@@ -95,5 +101,37 @@ public class MemberService {
             // 조회결과가 없다 -> 사용할 수 있다.
             return "ok";
         }
+    }
+
+    public boolean sendTemporaryPassword(String memberId, String memberEmail) {
+        // 아이디와 이메일로 회원 정보 조회
+        Optional<MemberEntity> memberOpt = memberRepository.findByMemberId(memberId);
+        if (memberOpt.isPresent()) {
+            MemberEntity member = memberOpt.get();
+            if (member.getMemberEmail().equals(memberEmail)) {
+                // 임시 비밀번호 생성
+                String temporaryPassword = generateTemporaryPassword();
+                // 회원의 비밀번호를 임시 비밀번호로 업데이트
+                member.setMemberPassword(temporaryPassword);
+                memberRepository.save(member);
+                // 임시 비밀번호를 이메일로 전송
+                sendTemporaryPasswordEmail(memberEmail, temporaryPassword);
+                log.debug(temporaryPassword);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void sendTemporaryPasswordEmail(String email, String temporaryPassword) {
+        mailService.sendTemporaryPasswordEmail(email, temporaryPassword);
+    }
+
+    private String generateTemporaryPassword() {
+        // 무작위 32자 토큰 생성
+        SecureRandom secureRandom = new SecureRandom();
+        byte[] tokenBytes = new byte[24];
+        secureRandom.nextBytes(tokenBytes);
+        return Base64.getUrlEncoder().withoutPadding().encodeToString(tokenBytes);
     }
 }

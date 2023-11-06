@@ -29,7 +29,7 @@
                                 <!-- Password -->
                                 <div class="form_item lock password" id="divPasswd">
                                     <div class="i_wrap"><i class="fa-solid fa-lock"></i></div>
-                                    <input type="password" name="memberPassword" onblur="pwCheck()" placeholder="비밀번호" class="input" value="" maxlength="20" autocomplete="new-password">
+                                    <input type="password" name="memberPassword" placeholder="비밀번호" class="input" value="" maxlength="20" autocomplete="new-password">
                                 </div>
 
                                 <!-- Email -->
@@ -37,11 +37,12 @@
                                     <div class="i_wrap"><i class="fa-solid fa-envelope"></i></div>
                                     <input type="email" id="memberEmail" name="memberEmail" placeholder="이메일" class="input" value="" maxlength="100">
                                     <button type="button" id="sendBtn" name="sendBtn" onclick="sendNumber()">인증번호</button>
-                                </div><br>
+                                </div>
                                 <div class="form_item email" id="mail_number" name="mail_number" style="display: none">
+                                    <div class="i_wrap"><i class="fa-solid fa-check"></i></div>
                                     <input type="text" name="number" class="input" id="number" placeholder="인증번호 입력">
                                     <button type="button" name="confirmBtn" id="confirmBtn" onclick="confirmNumber()">이메일 인증</button>
-                                </div><br>
+                                </div>
                                 <input type="text" id="Confirm" name="Confirm" style="display: none" value="">
                             </div>
                             <p id="check-result"></p>
@@ -788,7 +789,7 @@
     }
 
     function sendNumber(){
-        $("#mail_number").css("display","block");
+        $("div[id='mail_number']").toggle();
         $.ajax({
             url:"/mail",
             type:"post",

@@ -1,6 +1,7 @@
 package com.codingrecipe.member.controller;
 
 import com.codingrecipe.member.dto.MemberDTO;
+import com.codingrecipe.member.service.MailService;
 import com.codingrecipe.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,7 @@ import java.util.List;
 public class MemberController {
     // 생성자 주입
     private final MemberService memberService;
+    private final MailService mailService;
 
     // 회원가입 페이지 출력 요청
     @GetMapping("/member/save")
@@ -94,5 +96,33 @@ public class MemberController {
         System.out.println("memberId = " + memberId);
         String checkResult = memberService.idCheck(memberId);
         return checkResult;
+    }
+
+    @ResponseBody
+    @PostMapping("/mail")
+    public String MailSend(String mail){
+        int number = mailService.sendMail(mail);
+        String num = "" + number;
+
+        return num;
+    }
+
+    @GetMapping("/member/forgot-password")
+    public String forgotPasswordForm() {
+        return "forgot-password";
+    }
+
+    @PostMapping("/member/send-temporary-password")
+    public String sendTemporaryPassword(
+            @RequestParam("memberId") String memberId,
+            @RequestParam("memberEmail") String memberEmail
+    ) {
+        if (memberService.sendTemporaryPassword(memberId, memberEmail)) {
+            // 임시 비밀번호 전송 성공
+            return "temporary-password-success"; // 임시 비밀번호 전송 성공 페이지
+        } else {
+            // 회원 정보가 일치하지 않음
+            return "temporary-password-error"; // 에러 페이지
+        }
     }
 }
