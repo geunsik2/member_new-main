@@ -176,4 +176,5 @@ Temporary Items
 # End of https://www.toptal.com/developers/gitignore/api/macos,intellij,java
 
 /src/main/resources/application.yml
+/build/resources/main/application.yml
 /ppt

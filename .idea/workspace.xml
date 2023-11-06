@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="daf639dd-14fe-45a3-bd9f-129988dbb06e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/controller/MailController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/controller/MemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/repository/MemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/repository/MemberRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/service/MailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/service/MailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/service/MemberService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/save.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/css/save.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/save.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/save.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/controller/MailController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/entity/MemberEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/entity/MemberEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/repository/MemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/service/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/service/MailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/save.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/save.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/save.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/save.html" afterDir="false" />
-    </list>
+    <list default="true" id="daf639dd-14fe-45a3-bd9f-129988dbb06e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,7 +114,7 @@
       <workItem from="1698915072018" duration="559000" />
       <workItem from="1698969907645" duration="5698000" />
       <workItem from="1698976724318" duration="11665000" />
-      <workItem from="1699228563813" duration="15785000" />
+      <workItem from="1699228563813" duration="16258000" />
     </task>
     <servers />
   </component>
