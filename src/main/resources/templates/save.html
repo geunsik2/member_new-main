@@ -22,25 +22,25 @@
                                 <!-- Id -->
                                 <div class="form_item user" id="divId">
                                     <div class="i_wrap"><i class="fa-solid fa-user"></i></div>
-                                    <input type="text" name="memberId" id="memberId" onblur="idCheck()" placeholder="아이디" class="input" value="" maxlength="20" autocapitalize="off">
+                                    <input type="text" name="memberId" id="memberId" onblur="idCheck()" placeholder="아이디" class="input" value="" maxlength="20" autocapitalize="off" required>
                                     <div class="id_bumil">@bumil.com</div>
                                 </div>
 
                                 <!-- Password -->
                                 <div class="form_item lock password" id="divPasswd">
                                     <div class="i_wrap"><i class="fa-solid fa-lock"></i></div>
-                                    <input type="password" name="memberPassword" placeholder="비밀번호" class="input" value="" maxlength="20" autocomplete="new-password">
+                                    <input type="password" name="memberPassword" placeholder="비밀번호" class="input" value="" maxlength="20" autocomplete="new-password" required>
                                 </div>
 
                                 <!-- Email -->
                                 <div class="form_item email" id="divEmail">
                                     <div class="i_wrap"><i class="fa-solid fa-envelope"></i></div>
-                                    <input type="email" id="memberEmail" name="memberEmail" placeholder="이메일" class="input" value="" maxlength="100">
+                                    <input type="email" id="memberEmail" name="memberEmail" placeholder="이메일" class="input" value="" maxlength="100" required>
                                     <button type="button" id="sendBtn" name="sendBtn" onclick="sendNumber()">인증번호</button>
                                 </div>
                                 <div class="form_item email" id="mail_number" name="mail_number" style="display: none">
                                     <div class="i_wrap"><i class="fa-solid fa-check"></i></div>
-                                    <input type="text" name="number" class="input" id="number" placeholder="인증번호 입력">
+                                    <input type="text" name="number" class="input" id="number" placeholder="인증번호 입력" required>
                                     <button type="button" name="confirmBtn" id="confirmBtn" onclick="confirmNumber()">이메일 인증</button>
                                 </div>
                                 <input type="text" id="Confirm" name="Confirm" style="display: none" value="">
@@ -55,13 +55,13 @@
                                 <!-- Name -->
                                 <div class="form_item user" id="divName">
                                     <div class="i_wrap"><i class="fa-solid fa-user"></i></div>
-                                    <input type="text" name="memberName" placeholder="이름" class="input" value="" maxlength="40">
+                                    <input type="text" name="memberName" placeholder="이름" class="input" value="" maxlength="40" required>
                                 </div>
 
                                 <!-- Birthday -->
                                 <div class="form_item calendar" id="divBirthday">
                                     <div class="i_wrap"><i class="fa-solid fa-cake-candles"></i></div>
-                                    <input type="text" name="memberBirth" placeholder="생년월일 8자리" class="input" value="" maxlength="10">
+                                    <input type="text" name="memberBirth" placeholder="생년월일 8자리" class="input" value="" maxlength="10" required>
                                 </div>
 
                                 <!-- Gender -->
@@ -736,7 +736,7 @@
                                 <!-- Phone -->
                                 <div class="form_item phone" id="divPhoneNo">
                                     <div class="i_wrap"><i class="fa-solid fa-mobile"></i></div>
-                                    <input type="tel" name="memberPhone" placeholder="휴대전화번호" class="input" value="" maxlength="16">
+                                    <input type="tel" name="memberPhone" placeholder="휴대전화번호" class="input" value="" maxlength="16" required>
                                 </div>
                             </div>
                         </div>
@@ -798,6 +798,9 @@
             success: function(data){
                 alert("인증번호 발송");
                 $("#Confirm").attr("value",data);
+            },
+            error: function(err) {
+                console.log("Error: ", err);
             }
         });
     }

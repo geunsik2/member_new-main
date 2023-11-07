@@ -116,7 +116,6 @@ public class MemberService {
                 memberRepository.save(member);
                 // 임시 비밀번호를 이메일로 전송
                 sendTemporaryPasswordEmail(memberEmail, temporaryPassword);
-                log.debug(temporaryPassword);
                 return true;
             }
         }
