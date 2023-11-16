@@ -102,11 +102,30 @@ public class MemberController {
 
     @ResponseBody
     @PostMapping("/mail")
-    public String MailSend(String mail){
-        int number = mailService.sendMail(mail);
+    public String sendCode(String mail){
+        int number = mailService.sendCodeEmail(mail);
         String num = "" + number;
 
         return num;
+    }
+
+    @GetMapping("/member/forgot-id")
+    public String forgotIdForm() {
+        return "forgot-id";
+    }
+
+    @PostMapping("/member/send-id")
+    public String sendId(
+            @RequestParam("memberName") String memberName,
+            @RequestParam("memberEmail") String memberEmail
+    ) {
+        if (memberService.sendId(memberName, memberEmail)) {
+            // 아이디 전송 성공
+            return "id-success"; // 아이디 전송 성공 페이지
+        } else {
+            // 회원 정보가 일치하지 않음
+            return "id-error"; // 에러 페이지
+        }
     }
 
     @GetMapping("/member/forgot-password")

@@ -20,7 +20,7 @@ public class MailService {
         number = (int)(Math.random() * (90000)) + 100000;// (int) Math.random() * (최댓값-최소값+1) + 최소값
     }
 
-    public MimeMessage CreateMail(String mail){
+    public int sendCodeEmail(String mail){
         createNumber();
         MimeMessage message = javaMailSender.createMimeMessage();
 
@@ -33,18 +33,31 @@ public class MailService {
             body += "<h1>" + number + "</h1>";
             body += "<h3>" + "감사합니다." + "</h3>";
             message.setText(body,"UTF-8", "html");
+
+            javaMailSender.send(message);
         } catch (MessagingException e) {
             e.printStackTrace();
         }
-
-        return message;
+        return number;
     }
 
-    public int sendMail(String mail){
-        MimeMessage message = CreateMail(mail);
-        javaMailSender.send(message);
+    public void sendIdEmail(String email, String Id) {
+        MimeMessage message = javaMailSender.createMimeMessage();
 
-        return number;
+        try {
+            message.setFrom(senderEmail);
+            message.setRecipients(Message.RecipientType.TO, email);
+            message.setSubject("아이디 안내");
+            String body = "";
+            body += "요청하신 아이디입니다." + "</h3>";
+            body += "<h1>" + Id + "</h1>";
+            body += "<h3>" + "감사합니다." + "</h3>";
+            message.setText(body,"UTF-8", "html");
+
+            javaMailSender.send(message);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
     }
 
     public void sendTemporaryPasswordEmail(String email, String temporaryPassword) {

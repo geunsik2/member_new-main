@@ -103,6 +103,26 @@ public class MemberService {
         }
     }
 
+    public boolean sendId(String memberName, String memberEmail) {
+        // 이름과 이메일로 회원 정보 조회
+        Optional<MemberEntity> memberOpt = memberRepository.findByMemberName(memberName);
+        if (memberOpt.isPresent()) {
+            MemberEntity member = memberOpt.get();
+            if (member.getMemberEmail().equals(memberEmail)) {
+                // 해당 계정의 Id 조회
+                String memberId = member.getMemberId();
+                // Id를 이메일로 전송
+                sendIdEmail(memberEmail, memberId);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void sendIdEmail(String email, String Id) {
+        mailService.sendIdEmail(email, Id);
+    }
+
     public boolean sendTemporaryPassword(String memberId, String memberEmail) {
         // 아이디와 이메일로 회원 정보 조회
         Optional<MemberEntity> memberOpt = memberRepository.findByMemberId(memberId);

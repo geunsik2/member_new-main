@@ -13,22 +13,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/controller/HomeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/controller/MemberController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/controller/MemberController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/entity/MemberEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/entity/MemberEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/repository/MemberRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/repository/MemberRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/service/MailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/service/MailService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/service/MemberService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codingrecipe/member/service/MemberService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/save.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/save.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/entity/MemberEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/entity/MemberEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/repository/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/service/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/service/MailService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codingrecipe/member/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/forgot-password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/save.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/save.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +135,13 @@
       <workItem from="1698969907645" duration="5698000" />
       <workItem from="1698976724318" duration="11665000" />
       <workItem from="1699228563813" duration="21664000" />
-      <workItem from="1699314411956" duration="7704000" />
+      <workItem from="1699314411956" duration="22286000" />
+      <workItem from="1699344673012" duration="16707000" />
+      <workItem from="1699505873858" duration="3436000" />
+      <workItem from="1699511146956" duration="2933000" />
+      <workItem from="1699581373947" duration="20000" />
+      <workItem from="1700023635884" duration="502000" />
+      <workItem from="1700034353782" duration="58000" />
     </task>
     <servers />
   </component>
@@ -162,5 +163,15 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="javax.persistence.NonUniqueResultException" package="javax.persistence" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
